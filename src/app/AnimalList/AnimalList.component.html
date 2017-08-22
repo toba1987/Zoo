@@ -23,6 +23,9 @@
             <p *ngIf=" animal.date != '' ">
                 Date: {{ animal.date }}
             </p>
+            <p>
+                Sector: {{ animal.sector.name}}
+            </p>
         </li>
         <button (click)="remove(animal)">Remove</button>
         <button (click)="moveToTopAnimal(animal)">Move to top animal</button>
