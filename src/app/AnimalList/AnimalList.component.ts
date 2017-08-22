@@ -43,4 +43,8 @@ export class AnimalListComponent {
             }
         ];
     }
+    remove(animal) {
+        const index = this.animals.indexOf(animal);
+        this.animals.splice(index, 1);
+    }
 }
