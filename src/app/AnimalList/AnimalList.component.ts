@@ -25,4 +25,12 @@ export class AnimalListComponent {
         const index = this.animals.indexOf(animal);
         this.animals.splice(index, 1);
     }
+
+    moveToTopAnimal(animal) {
+        const index = this.animals.indexOf(animal);
+        this.animals.splice(index, 1);
+        this.animals.unshift(animal);
+
+
+    }
 }
