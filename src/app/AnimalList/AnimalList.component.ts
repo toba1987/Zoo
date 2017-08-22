@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Animal } from './Animal';
 @Component({
     selector: 'app-animals',
     templateUrl: './AnimalList.component.html'
@@ -11,37 +11,15 @@ export class AnimalListComponent {
     constructor() {
 
         this.animals = [
-            {
-                species: 'Dog',
-                name: 'Doe',
-                date: '2017-02-02',
-            },
-            {
-                species: 'Cat',
-                name: 'Mini',
-                date: '2017-02-13',
-            },
-            {
-                species: 'Wolf',
-                name: 'Wol',
-                date: 'jonh@gmail.com',
-            },
-            {
-                species: 'Bird',
-                name: 'Ben',
-                date: '2017-02-04',
-            },
-            {
-                species: 'Pig',
-                name: 'Piggi',
-                date: '2016-02-19',
-            },
-            {
-                species: 'Horse',
-                name: 'horen',
-                date: '',
-            }
+            new Animal("Dog", "Doe","2017-03-04"),
+            new Animal("Cat", "Cat","2017-05-06"),
+            new Animal("Pig", "Doe","2017-06-14"),
+            new Animal("Horse", "Doe",""),
+            new Animal("Bird", "Doe","2017-08-07")
+
         ];
+
+
     }
     remove(animal) {
         const index = this.animals.indexOf(animal);
