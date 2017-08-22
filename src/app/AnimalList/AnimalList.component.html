@@ -10,7 +10,7 @@
 
 <ul>
     <ng-container *ngFor="let animal of animals">
-        <li >
+        <li>
             <p>
                 Species: {{ animal.species }}
             </p>
@@ -29,6 +29,19 @@
         </li>
         <button (click)="remove(animal)">Remove</button>
         <button (click)="moveToTopAnimal(animal)">Move to top animal</button>
+    </ng-container>
+</ul>
+
+<h1>Sector List</h1>
+<ul>
+    <ng-container *ngFor="let sector of sectors">
+        <li>
+            <p>
+                Sector: {{ sector.name }}
+            </p>
+        </li>
+        <button (click)="showAnimal(sector)">Vidi listu zivotinja</button>
+
     </ng-container>
 </ul>
 

@@ -21,11 +21,11 @@ export class AnimalListComponent {
         ];
 
         this.animals = [
-            new Animal("Dog", "Doe","2017-03-04", this.sectors[0]),
-            new Animal("Cat", "Cat","2017-05-06", this.sectors[0]),
-            new Animal("Pig", "Doe","2017-06-14", this.sectors[2]),
+            new Animal("Dog", "Reks","2017-03-04", this.sectors[0]),
+            new Animal("Cat", "Mini","2017-05-06", this.sectors[0]),
+            new Animal("Pig", "Fifi","2017-06-14", this.sectors[2]),
             new Animal("Horse", "Doe","", this.sectors[1]),
-            new Animal("Bird", "Doe","2017-08-07", this.sectors[1])
+            new Animal("Bird", "Hani","2017-08-07", this.sectors[1])
         ];
 
     }
@@ -44,5 +44,15 @@ export class AnimalListComponent {
     addAnimal() {
        this.animals.push(this.newAnimal);
        this.newAnimal = new Animal('', '', '');
+    }
+
+    showAnimal(sector){
+        let list = [];
+        this.animals.forEach(function (animal) {
+            if (animal.sector && animal.sector.name == sector.name) {
+                list.push(animal.name);
+            }
+        });
+        alert(list);
     }
 }
