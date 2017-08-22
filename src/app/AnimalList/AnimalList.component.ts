@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Animal } from './Animal';
+
 @Component({
     selector: 'app-animals',
     templateUrl: './AnimalList.component.html'
@@ -7,7 +8,7 @@ import { Animal } from './Animal';
 export class AnimalListComponent {
     //any omogucava da bude niz bilo cega, moze biti niz stringova, objekata ...
     private animals: any[];
-
+    private newAnimal: Animal = new Animal('', '', '');
     constructor() {
 
         this.animals = [
@@ -16,7 +17,6 @@ export class AnimalListComponent {
             new Animal("Pig", "Doe","2017-06-14"),
             new Animal("Horse", "Doe",""),
             new Animal("Bird", "Doe","2017-08-07")
-
         ];
 
 
@@ -30,7 +30,10 @@ export class AnimalListComponent {
         const index = this.animals.indexOf(animal);
         this.animals.splice(index, 1);
         this.animals.unshift(animal);
+    }
 
-
+    addAnimal() {
+       this.animals.push(this.newAnimal);
+       this.newAnimal = new Animal('', '', '');
     }
 }

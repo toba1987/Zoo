@@ -1,5 +1,13 @@
 <h1>Animal List</h1>
 
+<div>
+    <input [(ngModel)]="newAnimal.species" />
+    <input [(ngModel)]="newAnimal.name" />
+    <input [(ngModel)]="newAnimal.date" />
+    <button (click)="addAnimal()">Add Animal</button>
+
+</div>
+
 <ul>
     <ng-container *ngFor="let animal of animals">
         <li >
