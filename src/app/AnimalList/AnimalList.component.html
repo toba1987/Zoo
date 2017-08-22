@@ -1,0 +1,18 @@
+<h1>Animal List</h1>
+
+<ul>
+    <ng-container *ngFor="let animal of animals">
+        <li>
+            <p>
+                Species: {{ animal.species }}
+            </p>
+            <p>
+                Name: {{ animal.name }}
+            </p>
+            <p>
+                Date: {{ animal.date }}
+            </p>
+        </li>
+    </ng-container>
+</ul>
+
