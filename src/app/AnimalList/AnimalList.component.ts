@@ -35,6 +35,11 @@ export class AnimalListComponent {
                 species: 'Pig',
                 name: 'Piggi',
                 date: '2016-02-19',
+            },
+            {
+                species: 'Horse',
+                name: 'horen',
+                date: '',
             }
         ];
     }

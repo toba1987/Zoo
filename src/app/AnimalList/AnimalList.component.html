@@ -2,14 +2,17 @@
 
 <ul>
     <ng-container *ngFor="let animal of animals">
-        <li>
+        <li >
             <p>
                 Species: {{ animal.species }}
             </p>
             <p>
                 Name: {{ animal.name }}
             </p>
-            <p>
+            <p *ngIf=" animal.date == '' ">
+                Date: {{ 'Nepoznato' }}
+            </p>
+            <p *ngIf=" animal.date != '' ">
                 Date: {{ animal.date }}
             </p>
         </li>
